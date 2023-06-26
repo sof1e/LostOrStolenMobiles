@@ -1,0 +1,224 @@
+﻿<Window x:Class="LostOrStolenMobiles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LostOrStolenMobiles"
+        mc:Ignorable="d"
+        Height="579"
+        Background="#FFF8CEE5"
+        Width="1046"
+        Title="Інформація про викрадені, втрачені мобільні телефони" Icon="/icons8-pink-macaron-64.png" >
+   
+    <Grid Height="453" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Margin="0,0,0,-2" HorizontalAlignment="Left" Width="901">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="792.513333333333" />
+            </Grid.RowDefinitions>
+
+            <Menu Grid.Row="0"
+                  Foreground="#ffffff" Margin="0,0,-144,772" Background="{x:Null}" FontFamily="Segoe Script" FontWeight="Bold">
+
+                <CheckBox x:Name="Daltonic_rb" 
+                          Content="ColorBlind" 
+                          Background="#FFE55B93" 
+                          BorderBrush="#FF232323" 
+                          Foreground="White" 
+                          Checked="CheckBox_Checked">
+                </CheckBox>
+            </Menu>
+
+            <DataGrid x:Name="MobileGrid"
+                      BorderThickness="0"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      CanUserResizeRows="False"
+                      HeadersVisibility="Column"
+                      AutoGenerateColumns="False" Margin="0,21,-144,339" RenderTransformOrigin="0.461,0.485" FontFamily="Segoe Script" FontWeight="Bold" Foreground="#FFDF1683" BorderBrush="#FFDF1583">
+                <DataGrid.Background>
+                    <ImageBrush ImageSource="/hello-kitty-minimal-3440x1440-9938.png" Stretch="UniformToFill"/>
+                </DataGrid.Background>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Ідентифікатор"
+                                        Binding="{Binding Id}"
+                                        Width="0.9*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White" />
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn Header="Відділ поліції"
+                                        Binding="{Binding Ovd}"
+                                        Width="2*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White" />
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn Header="Дата"
+                                        Binding="{Binding Insert_date}"
+                                        Width="0.9*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White" />
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn Header="Модель"
+                                        Binding="{Binding Nz}"
+                                        Width="0.45*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White" />
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn Header="IMEI"
+                                        Binding="{Binding Imei}"
+                                        Width="0.9*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White" />
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn Header="Номер" 
+                                        Binding="{Binding Nk}"
+                                        Width="0.35*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White"/>
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn Header="Дата в реєстрі"
+                                        Binding="{Binding Dk}"
+                                        Width="0.9*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextWrapping"
+                                Value="WrapWithOverflow" />
+                                <Setter Property="Background"
+                                Value="White" />
+                                <Setter Property="Foreground"
+                                Value="#FFE55B93" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </Grid>
+        <Button Content="" Margin="458,483,544,-72" RenderTransformOrigin="0.441,0.383" Style="{StaticResource InterfaceButton}" Click="Search_Click" FontFamily="Segoe Script" FontSize="18" BorderBrush="#FFF9CEE4" Foreground="#FFF9D9E2" OpacityMask="#FFFFBAD9">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-search-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Reset_button" Margin="26,483,0,-74" Style="{StaticResource InterfaceButton}" RenderTransformOrigin="0.441,0.383" Click="Reset_Click" FontFamily="Segoe Script" FontSize="18" Foreground="#FFF9D9E2" BorderBrush="#FFF9CEE4" HorizontalAlignment="Left" Width="60">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-reset-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="Search_tb" 
+            Margin="86,490,596,-72" 
+            Text="Enter ID" 
+            FontFamily="Bungee Inline"
+            GotFocus="SearchGotFocusEvent" 
+            PreviewTextInput="Search_tb_PreviewTextInput" 
+            Background="#FFF9C2E1" 
+            Foreground="White" FontSize="18" FontWeight="Bold" SelectionBrush="White" BorderBrush="#FFF9CDE4"/>
+        <Button x:Name="Exit_button" Margin="0,479,28,-83" FontSize="18" Style="{StaticResource InterfaceButton}" Click="Exit_Click" FontFamily="Segoe Script" BorderBrush="#FFF9CEE4" Foreground="#FFF9D9E2" HorizontalAlignment="Right" Width="61" IsMouseCapturedChanged="buttom_IsMouseOver" IsMouseDirectlyOverChanged="buttom_IsMouseOver">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-close-window-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Add_Button" Content="" Margin="508,481,485,-74" RenderTransformOrigin="0.441,0.383" Style="{StaticResource InterfaceButton}" Click = "Open_adding_window" FontFamily="Segoe Script" FontSize="18" BorderBrush="#FFF9CEE4" Foreground="#FFF9D9E2" IsMouseCapturedChanged="buttom_IsMouseOver" IsMouseDirectlyOverChanged="buttom_IsMouseOver">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-add-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Save_Button" Margin="814,483,178,-79" RenderTransformOrigin="0.441,0.383" Style="{StaticResource InterfaceButton}" IsMouseDirectlyOverChanged="buttom_IsMouseOver"
+                              Click="Export_button" FontFamily="Segoe Script" FontSize="18" BorderBrush="#FFF9CEE4" Foreground="#FFF9D9E2" IsMouseCapturedChanged="buttom_IsMouseOver">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-download-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Save_As_Button" Margin="875,482,112,-79" RenderTransformOrigin="0.441,0.383" Style="{StaticResource InterfaceButton}" IsMouseDirectlyOverChanged="buttom_IsMouseOver"
+                              Click="Export_As_button" FontFamily="Segoe Script" FontSize="18" BorderBrush="#FFF9CEE4" Foreground="#FFF9D9E2" IsMouseCapturedChanged="buttom_IsMouseOver">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-desktop-download-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Upload_Button" Margin="762,479,228,-78" RenderTransformOrigin="0.441,0.383" Style="{StaticResource InterfaceButton}" IsMouseDirectlyOverChanged ="buttom_IsMouseOver"
+                              Click="Import_button" FontFamily="Segoe Script" FontSize="18" BorderBrush="#FFF9CEE4" IsMouseCapturedChanged="buttom_IsMouseOver">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-upload-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Delete_button" Content="" Margin="560,482,433,-75" RenderTransformOrigin="0.441,0.383" Style="{StaticResource InterfaceButton}" Click="Open_deleting_window" FontFamily="Segoe Script" FontSize="18" BorderBrush="#FFF9CEE4" Foreground="#FFF9D9E2" IsMouseCapturedChanged="buttom_IsMouseOver" IsMouseDirectlyOverChanged="buttom_IsMouseOver">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-remove-64.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

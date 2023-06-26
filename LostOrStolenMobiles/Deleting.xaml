@@ -1,0 +1,40 @@
+﻿<Window x:Class="LostOrStolenMobiles.Deleting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LostOrStolenMobiles"
+        mc:Ignorable="d"
+        Title="Delete" 
+        Height="176" 
+        Width="350"
+        ResizeMode="NoResize" Icon="/icons8-pink-macaron-64.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/2872443a769921fbd0b8be757b2ec926.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,11" RenderTransformOrigin="0.5,0.792">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="Id_TextBox"
+                 Text="Введіть ідентифікатор"
+                 BorderBrush="White"
+                 VerticalAlignment="Top"
+                 Margin="5,23,5,0"
+                 GotFocus="DeleteGotFocusEvent"
+                 FontFamily="Segoe Script" Background="#FFFBC2D1" Foreground="White" FontWeight="Bold" SelectionBrush="#7FFD4EAF"/>
+
+        <Button x:Name="Delete_Button"
+                Content="Delete"
+                Width="102"
+                HorizontalAlignment="Center"
+                Margin="0,77,0,0"
+                Click="Delete" Background="#FFF9C0CE" BorderBrush="#FFFDFDFD" Foreground="White" FontSize="16" FontFamily="Bungee Inline"/>
+    </Grid>
+</Window>

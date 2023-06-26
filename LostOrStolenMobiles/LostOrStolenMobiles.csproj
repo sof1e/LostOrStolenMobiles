@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2872443a769921fbd0b8be757b2ec926.jpg" />
+    <None Remove="4bc38124ce3be00a702170b459a2a410.jpg" />
+    <None Remove="b92ac9d86f98a6568c106d26e495ce40.jpg" />
+    <None Remove="desktop-wallpaper-hello-kitty-iphone-6-best-hello-kitty-pattern.jpg" />
+    <None Remove="hello-kitty-minimal-3440x1440-9938.png" />
+    <None Remove="icons8-add-64.png" />
+    <None Remove="icons8-close-window-64.png" />
+    <None Remove="icons8-desktop-download-64.png" />
+    <None Remove="icons8-download-64.png" />
+    <None Remove="icons8-pink-macaron-64.png" />
+    <None Remove="icons8-remove-64.png" />
+    <None Remove="icons8-reset-64.png" />
+    <None Remove="icons8-search-64.png" />
+    <None Remove="icons8-upload-64.png" />
+    <None Remove="photo-1589307004173-3c95204d00ee.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.101.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="2872443a769921fbd0b8be757b2ec926.jpg" />
+    <Resource Include="4bc38124ce3be00a702170b459a2a410.jpg" />
+    <Resource Include="b92ac9d86f98a6568c106d26e495ce40.jpg" />
+    <Resource Include="desktop-wallpaper-hello-kitty-iphone-6-best-hello-kitty-pattern.jpg" />
+    <Resource Include="hello-kitty-minimal-3440x1440-9938.png" />
+    <Resource Include="icons8-add-64.png" />
+    <Resource Include="icons8-close-window-64.png" />
+    <Resource Include="icons8-desktop-download-64.png" />
+    <Resource Include="icons8-download-64.png" />
+    <Resource Include="icons8-pink-macaron-64.png" />
+    <Resource Include="icons8-remove-64.png" />
+    <Resource Include="icons8-reset-64.png" />
+    <Resource Include="icons8-search-64.png" />
+    <Resource Include="icons8-upload-64.png" />
+    <Resource Include="photo-1589307004173-3c95204d00ee.jpeg" />
+  </ItemGroup>
+
+</Project>
